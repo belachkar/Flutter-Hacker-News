@@ -10,7 +10,7 @@ part 'serializers.g.dart';
 @SerializersFor([
   Article,
 ])
-/// Used if no need for JSOn serialization
+/// Used if no need for JSON serialization
 // final Serializers serializers = _$serializers;
 
 /// Adding the JSOn plugin for JSON serialization and deserialization

@@ -47,7 +47,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-        // leading: CircularProgressIndicator(backgroundColor: Colors.white,),
         leading: LoadingInfo(widget.bloc.isLoading),
       ),
       body: StreamBuilder<UnmodifiableListView<Article>>(
@@ -60,9 +59,6 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         elevation: 10.0,
         backgroundColor: Colors.grey[200],
-        // type: BottomNavigationBarType.fixed,
-        // selectedItemColor: Colors.teal,
-        // unselectedItemColor: Colors.grey,
         currentIndex: _cBottomNavIndex,
         items: [
           BottomNavigationBarItem(
@@ -161,7 +157,6 @@ class _LoadingInfoState extends State<LoadingInfo>
             curve: Curves.easeInOutCirc,
           )),
         );
-        // return Container();
       },
     );
   }
